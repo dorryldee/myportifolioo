@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portifolio</title>
+    <link rel="stylesheet" href="static/css/style.css">
+     <link rel="icon"  type="image/png" href="static/images/dee.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <main>
+        <header>
+            <div>
+            <h1>Hi, I'm <br><span class="name">Dorryl Mbula</span><br></h1>
+            <p>A creative Developer & Designer crafting beautiful digital experiences in real-time</p>
+            </div>
+            <a href="projects"><button class="view">View my Work <span class="arrow">→</point></span></button></a>
+             <a href="contact"><button class="contact">Get in Touch</button></a>
+        </header>
+        <section>
+            <h2 style="font-size: 35px;">About Me</h2>
+            <p>I am a passionate developer and designer with a knack for creating beautiful digital experiences. With a strong foundation in both front-end and back-end technologies, I strive to build applications that are not only functional but also visually appealing. My journey in the tech world has been driven by curiosity and a desire to solve real-world problems through innovative solutions. When I'm not coding, you can find me exploring new design trends or contributing to open-source projects.</p>
+        </section>
+        <section id="projects">
+            <h2 style="font-size: 35px;">My Projects</h2>
+            <div id="allprojects">
+                <div class="project">
+                    <img src="static/images/st.jpg" alt="">
+                    <h3>Twinsight AI</h3>
+                    <p>TwinsightAI is an IoT-powered flood monitoring project that uses real time sensor data, cloud-based AI analytics and GIS driven digital twin visualization to predict flood risks and deliver early warnings for community safety.</p>
+                </div>
+                <div class="project">
+                    <img src="static/images/shh.jpg" alt="">
+                    <h3>Smarthunt</h3>
+                    <p>The Smart House Hunt System is an intelligent, AI-driven platform that streamlines property searching and management by integrating machine learning for personalized recommendations, occupancy prediction, and anomaly detection to enhance decision-making for tenants, landlords, and administrators.</p>
+                </div>
+                <div class="project">
+                    <img src="static/images/mgr1.jpg" alt="">
+                    <h3>Merrygoround</h3>
+                    <p>This digital platform enhances fairness by allowing members to anonymously draw rotation numbers, ensuring transparency, trust, and equal opportunity in receiving the pooled funds.</p>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+             <h2><b style="font-size: 35px;"> Skills & Expertise </b><br>Technologies and tools I work with</h2>
+             <div id="allskills">
+                <div class="skill">
+                  <i class="fa-solid fa-code"></i>
+                  <h3>Development</h3>
+                   <input type="button" value="HTML">
+                   <input type="button" value="CSS">
+                   <input type="button" value="JavaScript">
+                   <input type="button" value="Python">
+                </div>
+                 <div class="skill">
+                    <i class="fa-solid fa-palette"></i>
+                    <h3>Design</h3>
+                    <input type="button" value="UI/UX">
+                    <input type="button" value="Figma">
+                    <input type="button" value="Adobe XD">
+                    <input type="button" value="Tailwind">
+                 </div>
+                <div class="skill">
+                    <i class="fa-solid fa-tools"></i>
+                    <h3>Tools</h3>
+                      <input type="button" value="Docker">
+                      <input type="button" value="Linux">
+                      <input type="button" value="GitHub">
+                      <input type="button" value="VS Code">
+                 </div>
+            </div>
+        </section>
+        <!-- contact me -->
+         <section id="contact">
+            <h2 style="font-size: 35px;"><b>Let's Connect</b></h2>
+            <p style="font-size: 20px; ">Have a project in mind? Let's work together to create something amazing.</p>
+            <form action="#">
+                <label for="fname">Fullname</label>
+                <input type="text" id="fname" name="name" placeholder="Your Name" required>
+                <label for="email">Email </label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="phone"> Phone</label>
+                <input type="tel" name="phone" id="phone" value="+254" pattern="\+254[0-9]{9}">
+                <textarea placeholder="Your Message" required></textarea>
+            <a href="#"><button class="contact-me">Send Request</button></a>
+            </form>
+         </section>
+       
+    </main>
+    <footer>
+        <p style="color: rgb(209, 204, 204);">© 2025 Dorryl Dee. Built with HTML & CSS. All rights reserved.</p>
+        <p style="color: rgb(209, 204, 204);">Follow me on:</p>
+        <div class="social-icons">
+            <a href="https://github.com/dorryldee"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dorryl-mbula-31b569276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/dorryldee/"><i class="fa-brands fa-instagram"></i></a>
+
+            
+        </div>
+    </footer>
+</body>
+</html>
