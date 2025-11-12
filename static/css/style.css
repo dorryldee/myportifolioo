@@ -6,15 +6,18 @@ body{
 }
 main{
     padding: 50px;
-    background-color: rgb(35, 45, 66);
+    background-color: rgb(232, 232, 233);
 
 }
 
+
+
 header{
-    color: rgb(255, 255, 255);
+    color: rgb(61, 106, 254);
     text-align: center;
     padding: 20px 20px;
-    
+    background-image: url('static/images/prg.jpg');
+    background-size: cover;
 }
 header h1{
     font-size: 70px;
@@ -29,8 +32,9 @@ header .name{
 header p{
     font-size: 40px;
     margin-bottom: 30px;
-    color: #d8cdea;
+    color: #0c0c0c;
 }
+
 button{
     font-size: 20px;
     padding: 15px 30px;
@@ -65,9 +69,9 @@ button{
     background-size: 120%;
 }
 section{
-    background-color:rgb(141, 167, 253) ;
-    box-shadow: 0px 10px 10px rgb(197, 168, 231);
-    padding: 30px;
+    background-color:rgb(125, 123, 130) ;
+    box-shadow: 0px 10px 10px rgb(14, 14, 14);
+    padding: 20px;
     margin-bottom: 40px;
     border-radius: 5px;
     display: block;
@@ -75,7 +79,7 @@ section{
  h2{
     text-align: center;
     margin-bottom: 30px;
-    color: sienna;
+    color:  rgb(30, 42, 78);
 }
 
 
@@ -140,7 +144,7 @@ p{
 .skill input[type="button"] {
   padding: 10px 20px;
   margin: 6px;
-  background: #7577eb;
+  background: rgb(118, 42, 40);
   border: none;
   border-radius: 8px;
   color: white;
@@ -154,6 +158,7 @@ p{
   background: #3036f0;
   transform: translateY(-3px);
 }
+
 form{
     display: flex;
     flex-direction: column;
