@@ -10,14 +10,30 @@
 
 </head>
 <body>
+    <nav class="navbar">
+    <div class="logo">Dorryl</div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact-me">Contact</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</nav>
     <main>
+        
         <header class="hero">
+            <div class="hero-overlay"></div>
             <div>
             <h1>Hi, I'm <br><span class="name">Dorryl Mbula</span><br></h1>
             <p class="">A creative Developer & Designer crafting beautiful digital experiences in real-time</p>
             </div>
-           <a href="projects" class="btn view">View my Work <span class="arrow">→</span></a> <br>
-           <a href="contact" class="btn contact">Get in Touch</a>
+           <a href="#projects" class="btn view">View my Work <span class="arrow">→</span></a> <br>
+           <a href="#contact-me" class="btn contact">Get in Touch</a>
 
         </header>
         <section>
@@ -25,7 +41,7 @@
             <p>I am a passionate developer and designer with a knack for creating beautiful digital experiences. With a strong foundation in both front-end and back-end technologies, I strive to build applications that are not only functional but also visually appealing. My journey in the tech world has been driven by curiosity and a desire to solve real-world problems through innovative solutions. When I'm not coding, you can find me exploring new design trends or contributing to open-source projects.</p>
         </section>
         <section id="projects">
-            <h2 style="font-size: 35px;">My Projects</h2>
+            <h2 style="font-size: 35px; color: black;">My Projects</h2>
             <div id="allprojects">
                 <div class="project">
                     <img src="static/images/st.jpg" alt="">
@@ -45,7 +61,7 @@
             </div>
         </section>
         <section id="skills">
-             <h2><b style="font-size: 35px;"> Skills & Expertise </b><br>Technologies and tools I work with</h2>
+             <h2 style="color: rgb(47, 47, 66);"><b style="font-size: 35px; color: rgb(47, 47, 56);"> Skills & Expertise </b><br>Technologies and tools I work with</h2>
              <div id="allskills">
                 <div class="skill">
                   <i class="fa-solid fa-code"></i>
@@ -75,7 +91,7 @@
         </section>
         <!-- contact me -->
          <div id="contact-me">
-            <h2 style="font-size: 35px;"><b>Let's Connect</b></h2>
+            <h2 style="font-size: 35px; color: rgb(44, 44, 50);"><b>Let's Connect</b></h2>
             <p style="font-size: 20px; align-items: center; "><em style="align-items: center; margin-left: auto;">Have a project in mind? Let's work together to create something amazing.</em></p>
             <form action="#">
                 <label for="fname">Fullname</label>
@@ -87,6 +103,7 @@
                 <textarea placeholder="Your Message" required></textarea>
             <a href="#"><button class="contact-me">Send Request</button></a>
             </form>
+            <p id="form-status" class="status-message"></p>
             </div>
         
        
@@ -102,5 +119,45 @@
             
         </div>
     </footer>
+    <script>
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+
+const form = document.getElementById("contactForm");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault(); // prevent default form submission
+
+    const formData = new FormData(form);
+
+    fetch('send_email.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        if(data.trim() === "success") {
+            status.textContent = "Message sent successfully! We'll be back to you shortly.";
+            status.style.color = "green";
+            form.reset();
+        } else {
+            status.textContent = "Oops! Something went wrong. Please try again.";
+            status.style.color = "red";
+        }
+    })
+    .catch(error => {
+        status.textContent = "Error sending message. Try again later.";
+        status.style.color = "red";
+    });
+});
+
+
+</script>
 </body>
 </html>
